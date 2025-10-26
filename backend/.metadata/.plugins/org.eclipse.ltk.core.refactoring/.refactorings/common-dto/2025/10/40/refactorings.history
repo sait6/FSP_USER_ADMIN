@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;common-dto/src/main/java/com.saiteja.common.dto&apos; to &apos;com&apos;" description="Rename resource &apos;com.saiteja.common.dto&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/java/com.saiteja.common.dto" name="com" stamp="1759592471363" updateReferences="true"/>
-</session>

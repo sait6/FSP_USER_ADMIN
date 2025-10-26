@@ -1,5 +1,0 @@
-package com.saiteja.user_service.filter;
-
-public class JwtAuthenticationFilter {
-
-}
