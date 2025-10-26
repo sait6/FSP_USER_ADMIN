@@ -1,0 +1,17 @@
+# Angular
+frontend/ihub/node_modules
+frontend/ihub/dist
+frontend/ihub/.angular
+frontend/ihub/.vscode
+frontend/ihub/.idea
+
+# Java backend
+backend/**/target
+backend/**/.idea
+backend/**/.classpath
+backend/**/.project
+backend/**/.settings
+
+# OS
+.DS_Store
+Thumbs.db

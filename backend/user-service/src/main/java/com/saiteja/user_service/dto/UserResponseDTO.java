@@ -1,0 +1,106 @@
+package com.saiteja.user_service.dto;
+
+import java.util.Set;
+
+import com.saiteja.user_service.entity.UserRole;
+
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Schema(description = "User response payload")
+public class UserResponseDTO {
+	@Schema(description = "User ID", example = "101")
+	private String id;
+
+	@Schema(description = "User's first name", example = "Soumya")
+	private String firstname;
+
+	@Schema(description = "User's last name", example = "Dev")
+	private String lastname;
+
+	@Schema(description = "User's email address", example = "soumya@example.com")
+	private String email;
+
+	@Schema(description = "User role", example = "USER")
+	private UserRole role;
+
+	@Schema(description = "User's country", example = "India")
+	private String country;
+
+	@Schema(description = "User's city", example = "Hyderabad")
+	private String city;
+
+	@Schema(description = "User's account balance", example = "1000.0")
+	private double balance;
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public UserRole getRole() {
+		return role;
+	}
+
+	public void setRole(UserRole role) {
+		this.role = role;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+}

@@ -1,0 +1,5 @@
+package com.saiteja.order_service.interceptor;
+
+public class FeignClientInterceptor {
+
+}

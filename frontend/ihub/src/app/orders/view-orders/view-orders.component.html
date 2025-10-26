@@ -1,0 +1,48 @@
+<div class="order-table-container" *ngIf="ordersPlaced.length > 0; else noOrders">
+  <table mat-table [dataSource]="ordersPlaced" class="mat-elevation-z2" matSort>
+
+    <!-- Order ID -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Order ID</th>
+      <td mat-cell *matCellDef="let order">{{ order.id }}</td>
+    </ng-container>
+
+    <!-- User ID -->
+    <ng-container matColumnDef="userId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>User ID</th>
+      <td mat-cell *matCellDef="let order">{{ order.userId }}</td>
+    </ng-container>
+
+    <!-- Product ID -->
+    <ng-container matColumnDef="productId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Product ID</th>
+      <td mat-cell *matCellDef="let order">{{ order.productId }}</td>
+    </ng-container>
+
+    <!-- Quantity -->
+    <ng-container matColumnDef="quantity">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Quantity</th>
+      <td mat-cell *matCellDef="let order">{{ order.quantity }}</td>
+    </ng-container>
+
+    <!-- Total Price -->
+    <ng-container matColumnDef="totalPrice">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Total Price</th>
+      <td mat-cell *matCellDef="let order">{{ order.totalPrice | currency }}</td>
+    </ng-container>
+
+    <!-- Status -->
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+      <td mat-cell *matCellDef="let order">{{ order.status }}</td>
+    </ng-container>
+
+    <!-- Header and Row Definitions -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
+<ng-template #noOrders>
+  <p>No orders found.</p>
+</ng-template>

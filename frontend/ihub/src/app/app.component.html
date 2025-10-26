@@ -1,0 +1,52 @@
+<!-- Fixed Header -->
+<mat-toolbar color="primary" class="header">
+  <button mat-icon-button (click)="toggleSidebar()">
+    <mat-icon>{{ isSidebarOpen ? 'close' : 'menu' }}</mat-icon>
+  </button>
+  <span>My App</span>
+</mat-toolbar>
+
+<!-- Sidebar Overlay -->
+<div class="sidebar-overlay" *ngIf="isSidebarOpen">
+  <mat-accordion>
+    <!-- Users Section -->
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Users</mat-panel-title>
+      </mat-expansion-panel-header>
+      <button mat-button routerLink="/add-user" (click)="closeSidebar()">Add User</button>
+      <button mat-button routerLink="/view-users" (click)="closeSidebar()">View Users</button>
+    </mat-expansion-panel>
+
+    <!-- Orders Section -->
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Orders</mat-panel-title>
+      </mat-expansion-panel-header>
+      <button mat-button routerLink="/place-order" (click)="closeSidebar()">Place Order</button>
+      <button mat-button routerLink="/view-orders" (click)="closeSidebar()">View Pending Orders</button>
+    </mat-expansion-panel>
+
+    <!-- Products Section -->
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Products</mat-panel-title>
+      </mat-expansion-panel-header>
+      <button mat-button routerLink="/add-product" (click)="closeSidebar()">Add Product</button>
+      <button mat-button routerLink="/update-inventory" (click)="closeSidebar()">Update Inventory</button>
+      <button mat-button routerLink="/view-products" (click)="closeSidebar()">View Products</button>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+
+<!-- Main Content -->
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+
+<div class="loader-overlay" *ngIf="loading$ | async" @fadeInOut>
+  <div class="loader-content">
+    <mat-spinner diameter="60"></mat-spinner>
+    <p class="loader-text">Loading, please wait...</p>
+  </div>
+</div>

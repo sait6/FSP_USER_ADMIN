@@ -1,0 +1,5 @@
+package com.saiteja.user_service.utility;
+
+public class JwtUtil {
+
+}
